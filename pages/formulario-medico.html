@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicGIT | Formulario médico</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="../index.html" class="logo">Medic<span>GIT</span></a>
+            <nav class="nav">
+                <a href="../index.html" class="nav__link">Inicio</a>
+                <a href="formulario-medico.html" class="nav__link nav__link--active">Formulario médico</a>
+                <a href="reportar-problema.html" class="nav__link">Reportar problema</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-card">
+            <h1>Formulario médico</h1>
+            <p class="form-card__subtitle">Completa los datos del médico.</p>
+
+            <form class="form">
+                <fieldset class="form__group">
+                    <legend>Datos personales</legend>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="nombre">Nombre(s)</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan">
+                        </div>
+                        <div class="form__field">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Pérez López">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                        </div>
+                        <div class="form__field">
+                            <label for="genero">Género</label>
+                            <select id="genero" name="genero">
+                                <option value="">Selecciona una opción</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                                <option value="no-especificar">Prefiero no especificar</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__group">
+                    <legend>Contacto</legend>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="form__field">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 555 123 4567">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__group">
+                    <legend>Datos profesionales</legend>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="cedula">Cédula profesional</label>
+                            <input type="text" id="cedula" name="cedula" placeholder="Número de cédula">
+                        </div>
+                        <div class="form__field">
+                            <label for="especialidad">Especialidad</label>
+                            <select id="especialidad" name="especialidad">
+                                <option value="">Selecciona una especialidad</option>
+                                <option value="medicina-general">Medicina general</option>
+                                <option value="pediatria">Pediatría</option>
+                                <option value="cardiologia">Cardiología</option>
+                                <option value="dermatologia">Dermatología</option>
+                                <option value="ginecologia">Ginecología</option>
+                                <option value="otra">Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__field">
+                            <label for="hospital">Hospital / Clínica</label>
+                            <input type="text" id="hospital" name="hospital" placeholder="Lugar de trabajo">
+                        </div>
+                        <div class="form__field">
+                            <label for="experiencia">Años de experiencia</label>
+                            <input type="number" id="experiencia" name="experiencia" min="0" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <label>Turno</label>
+                        <div class="form__options">
+                            <label class="option"><input type="radio" name="turno" value="matutino"> Matutino</label>
+                            <label class="option"><input type="radio" name="turno" value="vespertino"> Vespertino</label>
+                            <label class="option"><input type="radio" name="turno" value="nocturno"> Nocturno</label>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <label for="observaciones">Observaciones</label>
+                        <textarea id="observaciones" name="observaciones" rows="4" placeholder="Información adicional..."></textarea>
+                    </div>
+                </fieldset>
+
+                <label class="option">
+                    <input type="checkbox" name="terminos"> Confirmo que la información proporcionada es correcta.
+                </label>
+
+                <div class="form__actions">
+                    <button type="reset" class="btn btn--secondary">Limpiar</button>
+                    <button type="submit" class="btn btn--primary">Guardar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">© 2026 MedicGIT</div>
+    </footer>
+</body>
+</html>

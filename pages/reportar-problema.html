@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicGIT | Reportar problema</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="../index.html" class="logo">Medic<span>GIT</span></a>
+            <nav class="nav">
+                <a href="../index.html" class="nav__link">Inicio</a>
+                <a href="formulario-medico.html" class="nav__link">Formulario médico</a>
+                <a href="reportar-problema.html" class="nav__link nav__link--active">Reportar problema</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-card">
+            <h1>Reportar un problema</h1>
+            <p class="form-card__subtitle">Describe el problema que encontraste para poder ayudarte.</p>
+
+            <form class="form">
+                <div class="form__row">
+                    <div class="form__field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                    </div>
+                    <div class="form__field">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+                    </div>
+                </div>
+
+                <div class="form__row">
+                    <div class="form__field">
+                        <label for="categoria">Categoría</label>
+                        <select id="categoria" name="categoria">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="error">Error del sistema</option>
+                            <option value="formulario">Problema con el formulario</option>
+                            <option value="acceso">Problema de acceso</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form__field">
+                        <label for="fecha">Fecha del incidente</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label>Prioridad</label>
+                    <div class="form__options">
+                        <label class="option"><input type="radio" name="prioridad" value="baja"> Baja</label>
+                        <label class="option"><input type="radio" name="prioridad" value="media"> Media</label>
+                        <label class="option"><input type="radio" name="prioridad" value="alta"> Alta</label>
+                    </div>
+                </div>
+
+                <div class="form__field">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Resumen breve del problema">
+                </div>
+
+                <div class="form__field">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="6" placeholder="Explica qué pasó, qué esperabas y los pasos para reproducirlo..."></textarea>
+                </div>
+
+                <div class="form__field">
+                    <label for="adjunto">Adjuntar captura (opcional)</label>
+                    <input type="file" id="adjunto" name="adjunto" accept="image/*">
+                </div>
+
+                <div class="form__actions">
+                    <button type="reset" class="btn btn--secondary">Limpiar</button>
+                    <button type="submit" class="btn btn--danger">Enviar reporte</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">© 2026 MedicGIT</div>
+    </footer>
+</body>
+</html>
